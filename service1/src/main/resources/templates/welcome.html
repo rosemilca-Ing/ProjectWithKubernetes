@@ -1,0 +1,66 @@
+<!DOCTYPE html>  
+<html lang="en" xmlns:th="http://www.thymeleaf.org">  
+<head>  
+    <meta charset="UTF-8">
+    <title th:text="'Welcome Friends!'"></title>
+    <link href="/css/main.css" rel="stylesheet">
+    <style>
+		body{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #eee;
+    border: 1px groove red;
+    border-radius: 5px; /* Ajoute des coins arrondis à la bordure */
+	margin: 15px; 
+	padding: 10px;
+	box-shadow: 2px 2px 5px black;
+	
+}
+
+.welcome{
+	color: blue;
+	font-size: 72px;
+	font-family: vivaldi;
+	position: center;
+	 text-align: center;
+}
+
+.greats{
+	color: blue;
+	font-size: 52px;
+	font-family: Vivaldi;
+	
+}
+
+.clickh{
+	color: blue;
+	font-size: 20px;
+	font-family: 'Times New Roman';
+}
+a{
+	text-decoration: none; /* Supprime la soulignement de lien par défaut */
+	padding: 10px 20px; /* Ajoute un espacement autour du lien */
+	border: 1px solid black; /* Ajoute une bordure autour du lien */
+	border-radius: 5px; /* Ajoute des coins arrondis à la bordure */
+	margin: 10px; /* Ajoute de la marge autour du lien */
+	color: purple;
+	
+}
+a:hover{
+	color: yellow;
+  	background-color: #000080; /* Change la couleur de fond du lien */
+ 	color: #fff; /* Change la couleur de texte du lien */
+	cursor: pointer; /* Change le curseur en une main avec un point d'interrogation */
+}
+	</style>
+</head>  
+<body>  
+    <h2 class="welcome">Welcome Friends!!!</h2>
+    <marquee><p class="greats" th:text=" ${name}+'!!'"></p></marquee> <!-- Ajouter cette ligne pour afficher la valeur de "s" -->
+    <br>
+    <p class="clickh">Click <a th:href="@{/login}"> here</a> to login </p>
+<!--     <a th:href="@{/}">here</a> -->
+    <script src="/js/main.js"></script>
+</body>  
+</html>
+<!-- <marquee><p class="greats" th:text="' Happy to see you, '+ ${name != null ? ' ' + name : ''}+'!!'"> -->
